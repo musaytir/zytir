@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan</title>
+    <!-- Mengimpor Font Poppins dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f45fff, #feb47b);
+            color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden; /* Untuk mencegah semburan hati keluar layar */
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .message, .photos {
+            display: none;
+            margin-top: 20px;
+        }
+        .photos img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #feb47b;
+        }
+        .heart {
+            font-size: 50px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        .heart.clicked {
+            color: #ff4757;
+            transform: scale(1.2);
+        }
+        .burst {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .burst div {
+            position: absolute;
+            font-size: 14px;
+            animation: burst 1s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes burst {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(3) translateY(-100px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Anniv Barbie</h1>
+        <button class="button" onclick="showMessage()">Klik untuk Membuka Pesan</button>
+
+        <div class="message" id="message">
+            <h2>Halo sayngku cantik!</h2>
+            <p>
+            <p>Happy Anniv sayangku cintaku duniaku jodohku istriku yng paling cntik bnget bnget bnget didunia ,ysy bertepatan tanggal 14 hari ini dimana kutemvbakki di atas motr heheh dimana sblum keluar bertngkar dlu baru jadi pacar hahaha lucuna di sayng badmood" tapi blum pacaran,nda sudah satru tahunmi bersama sayang bnayk sdah di lewati sama", kalau dingat ingat dlu serinhgki betengkar cowotra jga suka hilang" hehe banyak pelajaran bisa kudapat sama cewekku klau adami ceweta siap mki tanggung smua to sayang,waktu truss berjaln sampai" nda disadari sthunmi bersama cewe barbie yang imut cantik ini dan manja ini muachh, maap ya sayangku atas segala luka yang buatki sakit hati dari senang,sdih,tawa sdsah smuami sayng, happy Annivv sayngku timaciww sama cewekku sdah kasi rasa kasih sayngnya selama ini sampai detik ini, maciww syang sdah mau bertahan sma cowoyang sangat pakbal dunia yang sring cari gara" stiap hari kasih nangiski maap ya sayng, kek nda ekspt sam hbungnta yang kupikir dlu bakl nda sampai sthun ternyata sdah sejauh ini hehe maciww sayng sdah selalu buang egonya untk tidak sling mninggalkan maciww sayng sdah bertahn walaupun sulit dijalani maciww sayng bsa dibilang thun ini sngat berharga karna sdah di ksih kenal sam kluarganyaa cewekku smuanya sayang cowota janji akan perbaiki smuaa yang jelk" selalu ksih yang terbaik dan cwota selalu dismpingta dan garda terdpan buat barbiekuu jadi nda perlu khwatir ya sayangg, maap cowota akhir" ini sdah ksi merasa cewekku klau cowonya nda sayang sama cewekku cowota selalu sayangki bahkan  bertmabh sayang terusss nda akan nda sayang , smga thun kdapannya bsaki raih cita" ta sama" ya sayang dokan cowota sukses dan bnyak uang nnti klu sdah ada sayang cowota janji bkal kabulkan smua permintaan cewekku, maciww sayang satu tahun ini yang bnyak drama tpi sertu jg di sayng berptualang, smga kedepannya  bsa sama" lbih baik lagi ya sayngku bsa saling mngerti lebih lagi,menghargai smuanya ya sayang ttp saling percaya pokoknya maciwww sayangku, Happy Annivv sayang sethunn loveeee uuuuu more sayangggggggg <p>❤‍🔥❤‍🔥❤‍🔥✨❤‍🔥✨❤‍🔥✨❤‍🔥✨❤‍🔥😍❤‍🔥😍❤‍🔥❤‍🔥🫶🏻🫶🏻🫶🏻😍😍❤‍🔥❤‍🔥❤‍🔥😍🥰🥰🥰</p>
+            <button class="button" onclick="showPhotos()">Lihat Foto Kita</button>
+        </div>
+
+        <div class="photos" id="photos">
+            <img src="a.jpg" alt="Foto 1">
+            <img src="b.jpg" alt="Foto 2">
+            <img src="c.jpg" alt="Foto 3">
+        </div>
+
+        <!-- Ikon Hati -->
+        <div class="heart" id="heart" onclick="toggleHeart()">❤️</div>
+    </div>
+
+    <!-- Tempat untuk semburan hati -->
+    <div class="burst" id="burst"></div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+
+        function showPhotos() {
+            document.getElementById('photos').style.display = 'block';
+        }
+
+        function toggleHeart() {
+            const heart = document.getElementById('heart');
+            heart.classList.toggle('clicked');
+            createBurst();
+        }
+
+        function createBurst() {
+            const burst = document.getElementById('burst');
+            burst.innerHTML = ''; // Hapus semburan lama
+
+            for (let i = 0; i < 10; i++) {
+                const particle = document.createElement('div');
+                particle.innerHTML = '❤️';
+                particle.style.left = `${Math.random() * 200 - 100}px`;
+                particle.style.top = `${Math.random() * 200 - 100}px`;
+                particle.style.animationDelay = `${Math.random() * 0.5}s`;
+                burst.appendChild(particle);
+            }
+        }
+    </script>
+</body>
+</html>
